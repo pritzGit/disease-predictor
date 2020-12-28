@@ -29,6 +29,6 @@ def result():
         elif preds == 0:
             return render_template("diabetes.html", prediction_text = "NO")
         else:
-            return render_template("diabetes.html", prediction_text = "Error!")
+            return render_template("error.html")
     else:
         return render_template("diabetes.html")

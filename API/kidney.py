@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template
 from flask.globals import request
 
+from .all_models import get_kidney_preds
 
 kidney = Blueprint("kidney", __name__)
 
@@ -11,28 +12,39 @@ def home():
 @kidney.route("/result", methods=['GET', 'POST'])
 def result():
     if request.method == "POST":
-        age = int(request.form['age'])
-        sex = int(request.form['sex'])
-        cp = int(request.form['cp'])
-        trestbps = int(request.form['trestbps'])
-        chol = int(request.form['chol'])
-        fbs = float(request.form['fbs'])
-        restecg = float(request.form['restecg'])
-        thalach = int(request.form['thalach'])
-        exang = int(request.form['exang'])
-        oldpeak = int(request.form['oldpeak'])
-        slope = float(request.form['slope'])
-        ca = float(request.form['ca'])
-        thal = int(request.form['thal'])
-        print(sex)
-        values = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
+        age = float(request.form['age'])
+        bp = float(request.form['bp'])
+        sg = float(request.form['sg'])
+        al = float(request.form['al'])
+        su = float(request.form['su'])
+        rbc = float(request.form['rbc'])
+        pc = float(request.form['pc'])
+        pcc = float(request.form['pcc'])
+        ba = float(request.form['ba'])
+        bgr = float(request.form['bgr'])
+        bu = float(request.form['bu'])
+        sc = float(request.form['sc'])
+        sod = float(request.form['sod'])
+        pot = float(request.form['pot'])
+        hemo = float(request.form['hemo'])
+        pcv = float(request.form['pcv'])
+        wc = float(request.form['wc'])
+        rc = float(request.form['rc'])
+        htn = float(request.form['htn'])
+        dm = float(request.form['dm'])
+        cad = float(request.form['cad'])
+        appet = float(request.form['appet'])
+        pe = float(request.form['pe'])
+        ane = float(request.form['ane'])
         
-        preds = get_preds(values)
+        values = [age, bp,sg,al,su,rbc, pc, pcc, ba, bgr,bu, sc, sod,pot,hemo,pcv,wc, rc, htn, dm, cad, appet, pe, ane]
+        
+        preds = get_kidney_preds(values)
         if preds == 1:
-            return render_template("heart.html", prediction_text = "YES")
+            return render_template("kidney.html", prediction_text = "YES")
         elif preds == 0:
-            return render_template("heart.html", prediction_text = "NO")
+            return render_template("kidney.html", prediction_text = "NO")
         else:
-            return render_template("heart.html", prediction_text = "Error!")
+            return render_template("error.html")
     else:
-        return render_template("heart.html")
+        return render_template("kidney.html")

@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template
 from flask.globals import request
 
+from .all_models import get_lung_preds
 
 lung = Blueprint("lung", __name__)
 
@@ -11,28 +12,31 @@ def home():
 @lung.route("/result", methods=['GET', 'POST'])
 def result():
     if request.method == "POST":
-        age = int(request.form['age'])
-        sex = int(request.form['sex'])
-        cp = int(request.form['cp'])
-        trestbps = int(request.form['trestbps'])
-        chol = int(request.form['chol'])
-        fbs = float(request.form['fbs'])
-        restecg = float(request.form['restecg'])
-        thalach = int(request.form['thalach'])
-        exang = int(request.form['exang'])
-        oldpeak = int(request.form['oldpeak'])
-        slope = float(request.form['slope'])
-        ca = float(request.form['ca'])
-        thal = int(request.form['thal'])
-        print(sex)
-        values = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
+        Air_Pollution = int(request.form['Air_Pollution'])
+        Alcohol_use = int(request.form['Alcohol_use'])
+        Dust_Allergy = int(request.form['Dust_Allergy'])
+        OccuPational_Hazards = int(request.form['OccuPational_Hazards'])
+        Genetic_Risk = int(request.form['Genetic_Risk'])
+        chronic_Lung_Disease = float(request.form['chronic_Lung_Disease'])
+        Balanced_Diet = float(request.form['Balanced_Diet'])
+        Obesity = int(request.form['Obesity'])
+        Smoking = int(request.form['Smoking'])
+        Passive_Smoker = int(request.form['Passive_Smoker'])
+        Chest_Pain = float(request.form['Chest_Pain'])
+        Coughing_of_Blood = float(request.form['Coughing_of_Blood'])
+        Fatigue = int(request.form['Fatigue'])
         
-        preds = get_preds(values)
-        if preds == 1:
-            return render_template("heart.html", prediction_text = "YES")
-        elif preds == 0:
-            return render_template("heart.html", prediction_text = "NO")
+        values = [Air_Pollution, Alcohol_use,Dust_Allergy,OccuPational_Hazards,Genetic_Risk,chronic_Lung_Disease,Balanced_Diet,
+                  Obesity,Smoking,Passive_Smoker,Chest_Pain,Coughing_of_Blood,Fatigue]
+        
+        preds = get_lung_preds(values)
+        if preds == 'Low':
+            return render_template("lung.html", prediction_text = "YES")
+        elif preds == 'Medium':
+            return render_template("lung.html", prediction_text = "NO")
+        elif preds == 'High':
+            return render_template("lung.html", prediction_text = "NO")
         else:
-            return render_template("heart.html", prediction_text = "Error!")
+            return render_template("error.html")
     else:
-        return render_template("heart.html")
+        return render_template("lung.html")

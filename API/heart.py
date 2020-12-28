@@ -24,7 +24,6 @@ def result():
         slope = float(request.form['slope'])
         ca = float(request.form['ca'])
         thal = int(request.form['thal'])
-        print(sex)
         values = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
         
         preds = get_heart_preds(values)
@@ -33,6 +32,6 @@ def result():
         elif preds == 0:
             return render_template("heart.html", prediction_text = "NO")
         else:
-            return render_template("heart.html", prediction_text = "Error!")
+            return render_template("error.html")
     else:
         return render_template("heart.html")

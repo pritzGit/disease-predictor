@@ -2,7 +2,7 @@
 
 <h1> Kidney Failure </h1>
 <h3 class="prediction">{{ prediction_text }}</h3>
-<form action="/bcancer/result" method="POST">
+<form action="/kidney/result" method="POST">
     <div class="container">
       <div class="row">
         <h3 class="title">
@@ -10,33 +10,109 @@
         </h3>
       </div>
       <div class="row">
+        <div class="col d-flex justify-content-center">
+          <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/bcc.jpg') }}" style="background-color: black" />
+        </div> 
         <div class="col">
           <div class="form-group">
-            <label>Concave Points Mean</label>
-            <input type="text" class="form-control" name = "concave_points_mean" placeholder="concave_points_mean" />
+            <label>Age</label>
+            <input type="text" class="form-control" name = "age" placeholder="Age" />
           </div>
           <div class="form-group">
-            <label>Area Mean</label>
-            <input type="text" class="form-control" name = "area_mean" placeholder="area_mean" />
+            <label>Blood pressure</label>
+            <input type="text" class="form-control" name = "bp" placeholder="in mm/Hg " />
           </div>
           <div class="form-group">
-            <label>Radius Mean</label>
-            <input type="text" class="form-control" name = "radius_mean" placeholder="radius_mean" />
+            <label>Specific Gravity </label>
+            <input type="text" class="form-control" name = "sg" placeholder=" (1.005,1.010,1.015,1.020,1.025)" />
           </div>
           <div class="form-group">
-            <label>Perimeter Mean</label>
-            <input type="text" class="form-control" name = "perimeter_mean" placeholder="perimeter_mean" />
+            <label>albumin</label>
+            <input type="text" class="form-control" name = "al" placeholder="(0,1,2,3,4,5)" />
           </div>
           <div class="form-group">
-            <label>Concavity Mean</label>
-            <input type="text" class="form-control" name = "concavity_mean" placeholder="concavity_mean" />
+            <label>sugar </label>
+            <input type="text" class="form-control" name = "su" placeholder="(0,1,2,3,4,5)" />
           </div> 
+          <div class="form-group">
+            <label>Red Blood Cells</label>
+            <input type="text" class="form-control" name = "rbc" placeholder="abnormal':1,'normal':0" />
+          </div>
+          <div class="form-group">
+            <label>Pus Cells</label>
+            <input type="text" class="form-control" name = "pc" placeholder="(abnormal':1,'normal':0)" />
+          </div>
+          <div class="form-group">
+            <label>Pus cells clumps</label>
+            <input type="text" class="form-control" name = "pcc" placeholder="(present':1,'notpresent':0)" />
+          </div>
+          <div class="form-group">
+            <label>Bacteria</label>
+            <input type="text" class="form-control" name = "ba" placeholder="(present':1,'notpresent':0)" />
+          </div>
+          <div class="form-group">
+            <label>blood glucose random</label>
+            <input type="text" class="form-control" name = "bgr" placeholder="in mgs/dl" />
+          </div>
+          <div class="form-group">
+            <label>blood urea</label>
+            <input type="text" class="form-control" name = "bu" placeholder="in mgs/dl" />
+          </div>
+          <div class="form-group">
+            <label>serum creatinine</label>
+            <input type="text" class="form-control" name = "sc" placeholder="in mgs/dl" />
+          </div>
+          <div class="form-group">
+            <label>sodium</label>
+            <input type="text" class="form-control" name = "sod" placeholder="in mgs/dl" />
+          </div>
+          <div class="form-group">
+            <label>potassium  </label>
+            <input type="text" class="form-control" name = "pot" placeholder="in mgs/dl" />
+          </div> 
+          <div class="form-group">
+            <label>hemoglobin</label>
+            <input type="text" class="form-control" name = "hemo" placeholder="in gms" />
+          </div>
+          <div class="form-group">
+            <label>packed cell volume</label>
+            <input type="text" class="form-control" name = "pcv" placeholder="pcv" />
+          </div>
+          <div class="form-group">
+            <label>white blood cell count</label>
+            <input type="text" class="form-control" name = "wc" placeholder=" in cells/cumm" />
+          </div>
+          <div class="form-group">
+            <label>red blood cell count</label>
+            <input type="text" class="form-control" name = "rc" placeholder="in millions/cmm" />
+          </div>
+          <div class="form-group">
+            <label>Hyper-tension</label>
+            <input type="text" class="form-control" name = "htn" placeholder="(yes:1,no:0)" />
+          </div>
+          <div class="form-group">
+            <label>Diabetes Mellitus</label>
+            <input type="text" class="form-control" name = "dm" placeholder="(yes:1,no:0)" />
+          </div>
+          <div class="form-group">
+            <label>Coronary Artery Disease</label>
+            <input type="text" class="form-control" name = "cad" placeholder="(yes:1,no:0)" />
+          </div>
+          <div class="form-group">
+            <label>Appetite</label>
+            <input type="text" class="form-control" name = "appet" placeholder="(good':1,'poor':0)" />
+          </div>
+          <div class="form-group">
+            <label>Pedal edema</label>
+            <input type="text" class="form-control" name = "pe" placeholder="(yes:1,no:0)" />
+          </div>
+          <div class="form-group">
+            <label>Anemia</label>
+            <input type="text" class="form-control" name = "ane" placeholder="(yes:1,no:0)" />
+          </div>
           <br>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-        <div class="col d-flex justify-content-center">
-            <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/bcc.jpg') }}" style="background-color: black" />
-          </div> 
       </div>
     </div>
   </form>

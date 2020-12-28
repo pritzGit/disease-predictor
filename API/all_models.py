@@ -48,5 +48,6 @@ def get_liver_preds(values):
 
 def get_lung_preds(values):
     
-    preds = lung_model.predict(values)
+    a = scaler.fit_transform(np.array(values).reshape(1, -1))
+    preds = lung_model.predict(a)
     return preds[0]

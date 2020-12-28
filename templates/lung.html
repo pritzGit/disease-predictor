@@ -2,7 +2,7 @@
 
 <h1> Lung Cancer </h1>
 <h3 class="prediction">{{ prediction_text }}</h3>
-<form action="/bcancer/result" method="POST">
+<form action="/lung/result" method="POST">
     <div class="container">
       <div class="row">
         <h3 class="title">
@@ -10,27 +10,69 @@
         </h3>
       </div>
       <div class="row">
+        <div class="col d-flex justify-content-center">
+          <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/bcc.jpg') }}" style="background-color: black" />
+        </div> 
         <div class="col">
           <div class="form-group">
-            <label>Concave Points Mean</label>
-            <input type="text" class="form-control" name = "concave_points_mean" placeholder="concave_points_mean" />
+            <select class="form-select" aria-label="Default select example" name="Gender">
+                <option selected>Select Gender</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+              </select>
           </div>
           <div class="form-group">
-            <label>Area Mean</label>
-            <input type="text" class="form-control" name = "area_mean" placeholder="area_mean" />
+            <label>Air Pollution</label>
+            <input type="text" class="form-control" name = "Air_Pollution" placeholder="level (1-8)" />
           </div>
           <div class="form-group">
-            <label>Radius Mean</label>
-            <input type="text" class="form-control" name = "radius_mean" placeholder="radius_mean" />
+            <label>Alcohol use</label>
+            <input type="text" class="form-control" name = "Alcohol_use" placeholder="level (1-8)" />
           </div>
           <div class="form-group">
-            <label>Perimeter Mean</label>
-            <input type="text" class="form-control" name = "perimeter_mean" placeholder="perimeter_mean" />
+            <label>Dust Allergy</label>
+            <input type="text" class="form-control" name = "Dust_Allergy" placeholder="radiuslevel (1-8)_mean" />
           </div>
           <div class="form-group">
-            <label>Concavity Mean</label>
-            <input type="text" class="form-control" name = "concavity_mean" placeholder="concavity_mean" />
+            <label>OccuPational Hazards</label>
+            <input type="text" class="form-control" name = "OccuPational_Hazards" placeholder="level (1-8)" />
+          </div>
+          <div class="form-group">
+            <label>Genetic Risk</label>
+            <input type="text" class="form-control" name = "Genetic_Risk" placeholder="level (1-7)" />
+          </div>
+          <div class="form-group">
+            <label>chronic Lung Disease</label>
+            <input type="text" class="form-control" name = "chronic_Lung_Disease" placeholder="level (1-7)" />
           </div> 
+          <div class="form-group">
+            <label>Balanced Diet</label>
+            <input type="text" class="form-control" name = "Balanced_Diet" placeholder="level (1-7)" />
+          </div> 
+          <div class="form-group">
+            <label>Obesity</label>
+            <input type="text" class="form-control" name = "Obesity" placeholder="level (1-7)" />
+          </div> 
+          <div class="form-group">
+            <label>Smoking</label>
+            <input type="text" class="form-control" name = "Smoking" placeholder="level (1-8)" />
+          </div> 
+          <div class="form-group">
+            <label>Passive Smoker</label>
+            <input type="text" class="form-control" name = "Passive_Smoker" placeholder="level (1-8)" />
+          </div> 
+          <div class="form-group">
+            <label>Chest Pain</label>
+            <input type="text" class="form-control" name = "Chest_Pain" placeholder="level (1-9)" />
+          </div> 
+          <div class="form-group">
+            <label>Coughing of Blood</label>
+            <input type="text" class="form-control" name = "Coughing_of_Blood" placeholder="level (1-9)" />
+          </div>
+          <div class="form-group">
+            <label>Fatigue</label>
+            <input type="text" class="form-control" name = "Fatigue" placeholder="level (1-8)" />
+          </div>
           <br>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
