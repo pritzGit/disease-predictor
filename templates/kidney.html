@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block content %}
+
+<h1> Kidney Failure </h1>
+<h3 class="prediction">{{ prediction_text }}</h3>
+<form action="/bcancer/result" method="POST">
+    <div class="container">
+      <div class="row">
+        <h3 class="title">
+          Details: (float only)
+        </h3>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label>Concave Points Mean</label>
+            <input type="text" class="form-control" name = "concave_points_mean" placeholder="concave_points_mean" />
+          </div>
+          <div class="form-group">
+            <label>Area Mean</label>
+            <input type="text" class="form-control" name = "area_mean" placeholder="area_mean" />
+          </div>
+          <div class="form-group">
+            <label>Radius Mean</label>
+            <input type="text" class="form-control" name = "radius_mean" placeholder="radius_mean" />
+          </div>
+          <div class="form-group">
+            <label>Perimeter Mean</label>
+            <input type="text" class="form-control" name = "perimeter_mean" placeholder="perimeter_mean" />
+          </div>
+          <div class="form-group">
+            <label>Concavity Mean</label>
+            <input type="text" class="form-control" name = "concavity_mean" placeholder="concavity_mean" />
+          </div> 
+          <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/bcc.jpg') }}" style="background-color: black" />
+          </div> 
+      </div>
+    </div>
+  </form>
+
+
+
+{% endblock %}

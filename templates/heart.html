@@ -1,0 +1,81 @@
+{% extends "base.html" %} {% block content %}
+
+<h1> Diabetes </h1>
+<h3 class="prediction">{{ prediction_text }}</h3>
+<form action="/heart/result" method="POST">
+    <div class="container">
+      <div class="row">
+        <h3 class="title">
+          Details: (float only)
+        </h3>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <select class="form-select" aria-label="Default select example" name="sex">
+                <option selected>Select Gender</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label>Age</label>
+            <input type="text" class="form-control" name = "age" placeholder="Age" />
+          </div>
+          <div class="form-group">
+            <label>chest pain type </label>
+            <input type="text" class="form-control" name = "cp" placeholder="(4 values)" />
+          </div>
+          <div class="form-group">
+            <label>resting blood pressure</label>
+            <input type="text" class="form-control" name = "trestbps" placeholder="resting blood pressure" />
+          </div>
+          <div class="form-group">
+            <label>serum cholestoral</label>
+            <input type="text" class="form-control" name = "chol" placeholder="in mg/dl" />
+          </div>
+          <div class="form-group">
+            <label>fasting blood sugar</label>
+            <input type="text" class="form-control" name = "fbs" placeholder="> 120 mg/dl" />
+          </div> 
+          <div class="form-group">
+            <label>resting electrocardiographic results </label>
+            <input type="text" class="form-control" name = "restecg" placeholder="(values 0,1,2)" />
+          </div>
+          <div class="form-group">
+            <label>maximum heart rate achieved</label>
+            <input type="text" class="form-control" name = "thalach" placeholder="" />
+          </div>
+          <div class="form-group">
+            <label>exercise induced angina</label>
+            <input type="text" class="form-control" name = "exang" placeholder="" />
+          </div>
+          <div class="form-group">
+            <label>ST depression induced by exercise relative to rest</label>
+            <input type="text" class="form-control" name = "oldpeak" placeholder="old peak" />
+          </div> 
+          <div class="form-group">
+            <label>slope of the peak exercise ST segment</label>
+            <input type="text" class="form-control" name = "slope" placeholder="slope" />
+          </div>
+          <div class="form-group">
+            <label>number of major vessels colored by flourosopy</label>
+            <input type="text" class="form-control" name = "ca" placeholder="(0-3)" />
+          </div>
+          <div class="form-group">
+            <label>thal</label>
+            <input type="text" class="form-control" name = "thal" placeholder="3 = normal; 6 = fixed defect; 7 = reversable defect" />
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/bcc.jpg') }}" style="background-color: black" />
+          </div> 
+      </div>
+    </div>
+  </form>
+
+  
+
+{% endblock %}

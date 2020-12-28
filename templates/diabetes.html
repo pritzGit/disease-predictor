@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block content %}
+
+<h1> Diabetes </h1>
+<h3 class="prediction">{{ prediction_text }}</h3>
+<form action="/diabetes/result" method="POST">
+    <div class="container">
+      <div class="row">
+        <h3 class="title">
+          Details: (float only)
+        </h3>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Select Gender</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Other</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label>Age</label>
+            <input type="text" class="form-control" name = "Age" placeholder="Age" />
+          </div>
+          <div class="form-group">
+            <label>Pregnancies</label>
+            <input type="text" class="form-control" name = "Pregnancies" placeholder="Pregnancies" />
+          </div>
+          <div class="form-group">
+            <label>Glucose</label>
+            <input type="text" class="form-control" name = "Glucose" placeholder="Glucose" />
+          </div>
+          <div class="form-group">
+            <label>Blood Pressure</label>
+            <input type="text" class="form-control" name = "BloodPressure" placeholder="BloodPressure" />
+          </div>
+          <div class="form-group">
+            <label>Skin Thickness</label>
+            <input type="text" class="form-control" name = "SkinThickness" placeholder="SkinThickness" />
+          </div> 
+          <div class="form-group">
+            <label>Insulin</label>
+            <input type="text" class="form-control" name = "Insulin" placeholder="Insulin" />
+          </div>
+          <div class="form-group">
+            <label>BMI</label>
+            <input type="text" class="form-control" name = "BMI" placeholder="BMI" />
+          </div>
+          <div class="form-group">
+            <label>DiabetesPedigreeFunction</label>
+            <input type="text" class="form-control" name = "DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" />
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+            <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/bcc.jpg') }}" style="background-color: black" />
+          </div> 
+      </div>
+    </div>
+  </form>
+
+  
+
+{% endblock %}
