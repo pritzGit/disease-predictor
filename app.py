@@ -20,7 +20,17 @@ def index():
     # HOMEPAGE
     return render_template('index.html')
 
+@app.route('/privacyterms', methods=['GET'])
+def privacy():
+    return render_template('privacy_policy.html')
 
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('error.html'), 404
+
+@app.errorhandler(500)
+def not_found(e):
+    return render_template('error.html'), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
