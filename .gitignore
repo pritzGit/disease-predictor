@@ -1,4 +1,4 @@
-.ipnyb_checkpoints
+.ipnyb_checkpoints/
 __pycache__/
 *.py[cod]
 
