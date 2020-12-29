@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
-<h1> Liver Failure </h1>
+<h1> Know your chances of having Liver Disease </h1>
 <h3 class="prediction">{{ prediction_text }}</h3>
 <form action="/liver/result" method="POST">
     <div class="container">
@@ -55,10 +55,10 @@
             <input type="text" class="form-control" name = "Albumin_and_Globulin_Ratio" placeholder="concavity_mean" />
           </div> 
           <br>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-warning">Predict</button>
         </div>
         <div class="col d-flex justify-content-center">
-            <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/bcc.jpg') }}" style="background-color: black" />
+            <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/liver.jpg') }}" style="background-color: black" />
           </div> 
       </div>
     </div>

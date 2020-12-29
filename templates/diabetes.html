@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
-<h1> Diabetes </h1>
+<h1> Know your chances of having Diabetes </h1>
 <h3 class="prediction">{{ prediction_text }}</h3>
 <form action="/diabetes/result" method="POST">
     <div class="container">
@@ -10,6 +10,9 @@
         </h3>
       </div>
       <div class="row">
+        <div class="col d-flex justify-content-center">
+          <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/diabetes.jpg') }}" style="background-color: black" />
+        </div>
         <div class="col">
           <div class="form-group">
             <select class="form-select" aria-label="Default select example">
@@ -52,11 +55,8 @@
             <input type="text" class="form-control" name = "DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" />
           </div>
           <br>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-        <div class="col d-flex justify-content-center">
-            <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/bcc.jpg') }}" style="background-color: black" />
-          </div> 
+          <button type="submit" class="btn btn-primary">Predict</button>
+        </div> 
       </div>
     </div>
   </form>

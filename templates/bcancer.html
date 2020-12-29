@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
-<h1> Breast Cancer </h1>
+<h1> Know your chances of having Breast Cancer </h1>
 <h3 class="prediction">{{ prediction_text }}</h3>
 <form action="/bcancer/result" method="POST">
     <div class="container">
@@ -32,7 +32,7 @@
             <input type="text" class="form-control" name = "concavity_mean" placeholder="concavity_mean" />
           </div> 
           <br>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-info">Predict</button>
         </div>
         <div class="col d-flex justify-content-center">
             <img class="img-fluid mx-auto d-block" src="{{url_for('static', filename='images/bcc.jpg') }}" style="background-color: black" />
