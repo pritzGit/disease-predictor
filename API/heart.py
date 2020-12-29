@@ -28,9 +28,9 @@ def result():
         
         preds = get_heart_preds(values)
         if preds == 1:
-            return render_template("heart.html", prediction_text = "YES")
+            return render_template("result_neg.html", preds = "YES, You have the chances of having heart disease!")
         elif preds == 0:
-            return render_template("heart.html", prediction_text = "NO")
+            return render_template("result.html", preds = "NO, you dont have any risk of Heart Faliure ")
         else:
             return render_template("error.html")
     else:

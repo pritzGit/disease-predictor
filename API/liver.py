@@ -27,9 +27,9 @@ def result():
         
         preds = get_liver_preds(values)
         if preds == 1:
-            return render_template("liver.html", prediction_text = "YES")
+            return render_template("result_neg.html", preds = "YES, you are suffering from liver disease.")
         elif preds == 0:
-            return render_template("liver.html", prediction_text = "NO")
+            return render_template("result.html", preds = "NO, you are safe as of now.")
         else:
             return render_template("error.html")
     else:

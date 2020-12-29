@@ -41,9 +41,9 @@ def result():
         
         preds = get_kidney_preds(values)
         if preds == 1:
-            return render_template("kidney.html", prediction_text = "YES")
+            return render_template("result_neg.html", preds = "YES, you are suffering from Chronic Kidney Disease.")
         elif preds == 0:
-            return render_template("kidney.html", prediction_text = "NO")
+            return render_template("result.html", preds = "NO, you are not suffering from Chronic Kidney Disease.")
         else:
             return render_template("error.html")
     else:

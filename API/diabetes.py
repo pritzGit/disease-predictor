@@ -24,10 +24,10 @@ def result():
         values = [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin ,BMI ,DiabetesPedigreeFunction ,Age]
         
         preds = get_diabetes_preds(values)
-        if preds == 1:
-            return render_template("diabetes.html", prediction_text = "YES")
-        elif preds == 0:
-            return render_template("diabetes.html", prediction_text = "NO")
+        if preds == 0:
+            return render_template("result.html", preds = "NO, you don't have Diabetes.")
+        elif preds == 1:
+            return render_template("result_neg.html", preds = "YES, you are suffering from diabetes.")
         else:
             return render_template("error.html")
     else:

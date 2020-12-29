@@ -22,9 +22,9 @@ def result():
         
         preds = get_cancer_preds(values)
         if preds == 1:
-            return render_template("bcancer.html", prediction_text = "Malignant")
-        elif preds == 0:
-            return render_template("bcancer.html", prediction_text = "Benigh")
+            return render_template("result_neg.html", preds = "Malignant")
+        elif preds == 2:
+            return render_template("result.html", preds = "Benign")
         else:
             return render_template("error.html")
     else:
