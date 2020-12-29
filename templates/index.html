@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block content %}
+
       <main>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
           <ol class="carousel-indicators">
@@ -14,7 +15,7 @@
                 <img src="{{url_for('static', filename='images/48604.jpg') }}" class="d-block w-100" aria-hidden="true" width="100%" height="50%" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="{{url_for('static', filename='images/covid.jpg') }}" class="d-block w-100" aria-hidden="true" width="100%" height="50%" alt="...">
+                <img src="{{url_for('static', filename='images/medicine.jpg') }}" class="d-block w-100" aria-hidden="true" width="100%" height="50%" alt="...">
                 
             </div>
           </div>
@@ -38,25 +39,23 @@
           <!-- Three columns of text below the carousel -->
           <div class="row">
             <div class="col-lg-4">
-              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      
+              <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140"  role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
+              <img class = "rounded-circle" width="140" height="140" src="{{url_for('static', filename='images/breast.svg') }}" alt="" preserveAspectRatio="xMidYMid slice" focusable="false">
               <h2>Breast Cancer</h2>
-              <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-              <p><a class="btn btn-secondary" href="/bcancer" role="button">View details &raquo;</a></p>
+                <p>Breast Cancer occurs when some breast cells grow abnornally and gets too out of hand. Check now with this new web app your chances of getting the diease and remain worry free!</p>
+              <p><a class="btn btn-secondary" href="/bcancer" role="button">Check Now! &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      
+              <img class = "rounded-circle" width="140" height="140" src="{{url_for('static', filename='images/diabetes-icon.jpg') }}" alt="" preserveAspectRatio="xMidYMid slice" focusable="false">              
               <h2>Diabetes</h2>
-              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-              <p><a class="btn btn-secondary" href="/diabetes" role="button">View details &raquo;</a></p>
+                <p>Diabetes occur when there is too much blood sugar in the body. Check now with this new web app your chances of getting the diease and remain worry free!</p>
+              <p><a class="btn btn-secondary" href="/diabetes" role="button">Check Now! &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      
+              <img class = "rounded-circle" width="140" height="140" src="{{url_for('static', filename='images/heart-icon.jpg') }}" alt="" preserveAspectRatio="xMidYMid slice" focusable="false">      
               <h2>Heart Failure</h2>
-              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-              <p><a class="btn btn-secondary" href="/heart" role="button">View details &raquo;</a></p>
+                <p>Heart Failure generally means that the heart will stop working where generally most common ways is that of blocked arteries. Check now with this new web app your chances of getting the diease and remain worry free!</p>
+              <p><a class="btn btn-secondary" href="/heart" role="button">Check Now! &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
           </div><!-- /.row -->
       
@@ -65,25 +64,22 @@
           <!-- Three columns of text below the carousel -->
           <div class="row">
             <div class="col-lg-4">
-              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      
+              <img class = "rounded-circle" width="140" height="140" src="{{url_for('static', filename='images/kidney-icon.png') }}" alt="" preserveAspectRatio="xMidYMid slice" focusable="false">      
               <h2>Kidney Failure</h2>
-              <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-              <p><a class="btn btn-secondary" href="/kidney" role="button">View details &raquo;</a></p>
+                <p>Renal failure mean that one of your kidney has or will stop working and the blood is not getting filtered properly. Check now with this new web app your chances of getting the diease and remain worry free!</p>
+              <p><a class="btn btn-secondary" href="/kidney" role="button">Check Now! &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      
-              <h2>Liver Failure</h2>
-              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-              <p><a class="btn btn-secondary" href="/liver" role="button">View details &raquo;</a></p>
+              <img class = "rounded-circle" width="140" height="140" src="{{url_for('static', filename='images/liver.svg') }}" alt="" preserveAspectRatio="xMidYMid slice" focusable="false">      
+              <h2>Liver Disease</h2>
+                <p>Liver disease is any disturbance of liver function that causes illness. Check now with this new web app your chances of getting the diease and remain worry free!</p>
+              <p><a class="btn btn-secondary" href="/liver" role="button">Check Now! &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-              <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      
+              <img class = "rounded-circle" width="140" height="140" src="{{url_for('static', filename='images/684052.svg') }}" alt="" preserveAspectRatio="xMidYMid slice" focusable="false">      
               <h2>Lung Cancer</h2>
-              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-              <p><a class="btn btn-secondary" href="/lung" role="button">View details &raquo;</a></p>
+                <p>Lung cancer begins in the lungs and most often occurs in people who smoke. Check now with this new web app your chances of getting the diease and remain worry free!</p>
+              <p><a class="btn btn-secondary" href="/lung" role="button">Check Now! &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
           </div><!-- /.row -->
       
@@ -93,11 +89,11 @@
       
           <div class="row featurette">
             <div class="col-md-7">
-              <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              <h2 class="featurette-heading">Accurate, Fast and Data driven models. <span class="text-muted">It’ll blow your mind.</span></h2>
+              <p class="lead">We aim only for the best of all. So we have the most accurate models with no less than 80% accuracy upto 100% accurate models.</p>
             </div>
             <div class="col-md-5">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{{url_for('static', filename='images/ai.jpg') }}" alt="">
       
             </div>
           </div>
@@ -106,12 +102,11 @@
       
           <div class="row featurette">
             <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-              <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+              <h2 class="featurette-heading">Its free and is at the palm of your hand. <span class="text-muted">See for yourself.</span></h2>
+              <p class="lead">As getting proper healthcare is difficult is remote areas, So I aim to bring this to every nook and corner of the world so that everyone can have access to the top quality healthcare they deserve.</p>
             </div>
             <div class="col-md-5 order-md-1">
-              <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-      
+              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="{{url_for('static', filename='images/ww.jpg') }}" alt="">
             </div>
           </div>
       
