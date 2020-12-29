@@ -31,11 +31,11 @@ def result():
         
         preds = get_lung_preds(values)
         if preds == 'Low':
-            return render_template("result_neg.html", prediction_text = "You have low chance of acquiring Lung cancer")
+            return render_template("result_neg.html", preds = "You have low chance of acquiring Lung cancer")
         elif preds == 'Medium':
-            return render_template("result.html", prediction_text = "You have medium chance of acquiring Lung cancer")
+            return render_template("result.html", preds = "You have medium chance of acquiring Lung cancer")
         elif preds == 'High':
-            return render_template("result_neg.html", prediction_text = "You have High chance of acquiring Lung cancer")
+            return render_template("result_neg.html", preds = "You have High chance of acquiring Lung cancer")
         else:
             return render_template("error.html")
     else:
