@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+
+<h1 style="text-align: center; padding-top: 2em"> {{ preds }}</h1>
+<h3 style="text-align: center"> Stay healthy!!</h3>
+<img class="img-fluid center" src="{{url_for('static', filename='images/pos.jpg') }}" width="80%" height="80%" alt="">
+<div class="d-grid gap-2">
+    <a href="/" class="btn btn-danger" role="button">Take me back home</a>
+  </div>
+
+{% endblock %}

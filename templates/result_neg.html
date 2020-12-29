@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %}
+
+<h1 style="text-align: center; padding-top: 1em"> {{ preds }}</h1>
+<h2 style="text-align: center">Take precautions and consult a doctor <a href="https://www.apollo247.com/" target="_blank">immediately</a></h2>
+<img class="img-fluid center" style="text-align: center; padding: top 1em;;" src="{{url_for('static', filename='images/negativity.jpg') }}" width="80%" height="50%" alt="">
+<div class="d-grid gap-2">
+    <a href="/" class="btn btn-danger" role="button">Take me back home</a>
+  </div>
+{% endblock %}
