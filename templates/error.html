@@ -1,5 +1,7 @@
 {% extends "base.html" %} {% block content %}
 
 <img src="{{url_for('static', filename='images/404_teaser.jpg') }}" height= "80%" width="100%" alt="">
-
+<div class="d-grid gap-2">
+    <a href="/" class="btn btn-danger" role="button">Take me back home</a>
+</div>
 {% endblock %}
